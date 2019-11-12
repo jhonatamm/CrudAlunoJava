@@ -32,7 +32,8 @@ public class AlunoAdminController {
 		Escola.getAlunoAdminView().getBtnEditar().addActionListener(new EditAluno());
 		Escola.getAlunoAdminView().getAlunosTable().getSelectionModel().addListSelectionListener(new EditAlunoListener());
 		Escola.getAlunoAdminView().getBtnEditSalvar().addActionListener(new EditAlunoSalvar());
-		
+		Escola.getAlunoAdminView().getBtnCancelar().addActionListener(new Cancelar());
+		Escola.getAlunoAdminView().getBtnEditCancela().addActionListener(new Cancelar());
 	}
 	
 	
@@ -102,6 +103,9 @@ class EditAluno implements ActionListener{
 		
 	}
 }
+
+
+
 class EditAlunoSalvar implements ActionListener{
 
 	@Override
@@ -131,6 +135,17 @@ class salvarAluno implements ActionListener{
 		AlunoMaintener.gettableInstance().update();
 		e.getInternalFrame().setVisible(false);
 		// TODO Auto-generated method stub
+		
+	}
+	
+}
+class Cancelar implements ActionListener{
+
+	@Override
+	public void actionPerformed(ActionEvent args) {
+		AlunoAdminView e = Escola.getAlunoAdminView();
+		e.getEditarAluno().setVisible(false);
+		e.getInternalFrame().setVisible(false);
 		
 	}
 	
