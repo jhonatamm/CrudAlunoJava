@@ -1,7 +1,9 @@
-# CrudAlunoJava
+# Crud Aluno Java
 
 Criado para auxiliar em criações basicas de cruds 
 
 sem uso de banco de dados.
 
-pure
+apenas um ArrayList
+
+uma interface para gerir , utilizando interface grafica
